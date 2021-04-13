@@ -1,5 +1,8 @@
 //Created by Joshua Schoonover and Rob Payne
 
+CORS expecing port 3000
+my port 9090
+
 endpoints:
 Dispatcher Controller:
 Get /requests -get all
