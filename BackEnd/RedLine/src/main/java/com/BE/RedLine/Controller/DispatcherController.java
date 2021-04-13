@@ -27,7 +27,7 @@ public class DispatcherController {
         return requestRepository.findById(id);
     }
     //patch one
-    @PatchMapping("/requests/{id}")
+    @PatchMapping("/requests/{id}") //takes a key value pair for each paramater to change
     public Request assign(@PathVariable long id, @RequestBody Map<String,String> input){
         Request request = requestRepository.findById(id).get();
         if(request == null){return null;}
@@ -36,12 +36,9 @@ public class DispatcherController {
             //set the associated property
             switch (key.toLowerCase()){
                 case "responder": request.setResponder(input.get(key)); break;
-
             }
         }
 
         return requestRepository.save(request);
     }
-
-
 }
