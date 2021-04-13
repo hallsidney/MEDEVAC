@@ -23,6 +23,10 @@ public class Request extends NineLine{
         super(location, callSign, patientUrgency, specialEquipment, patientType);
     }
 
+    public Request( NineLine nineLine){
+        super(nineLine.getLocation(), nineLine.getCallSign(), nineLine.getPatientUrgency(),nineLine.getSpecialEquipment(), nineLine.getPatientType(), nineLine.getSecurity(), nineLine.getHlzMarking(), nineLine.getNationality(), nineLine.getNbc());
+    }
+
     public long getId() {
         return id;
     }
