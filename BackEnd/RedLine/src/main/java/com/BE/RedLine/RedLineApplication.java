@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class RedLineApplication {
-private String ExpectedURL = "localhost:3000";
+private String ExpectedURL = "http://localhost:3000";
 	public static void main(String[] args) {
 		SpringApplication.run(RedLineApplication.class, args);
 	}
